@@ -1,13 +1,30 @@
 package com.involves.selecao.alerta;
+import java.io.Serializable;
 import java.util.List;
 
-public class Pesquisa {
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Pesquisa implements Serializable {
+	
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3679426224575474209L;	
+	
 	private int id;
 	private String rotulo;
 	private String notificante;
 	private String ponto_de_venda;
 	private String produto;
+	private String categoria;
 	private String preco_estipulado;
+	private String participação_estipulada;	
+	
 	private List<Resposta> respostas;
 	
 	public int getId() {
@@ -52,4 +69,17 @@ public class Pesquisa {
 	public void setPreco_estipulado(String preco_estipulado) {
 		this.preco_estipulado = preco_estipulado;
 	}
+	public String getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+	public String getParticipação_estipulada() {
+		return participação_estipulada;
+	}
+	public void setParticipação_estipulada(String participação_estipulada) {
+		this.participação_estipulada = participação_estipulada;
+	}
+	
 }
