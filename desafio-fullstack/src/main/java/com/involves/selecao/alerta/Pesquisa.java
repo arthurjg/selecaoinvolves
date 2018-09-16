@@ -23,7 +23,7 @@ public class Pesquisa implements Serializable {
 	private String produto;
 	private String categoria;
 	private String preco_estipulado;
-	private String participação_estipulada;	
+	private String participacao_estipulada;	
 	
 	private List<Resposta> respostas;
 	
@@ -75,11 +75,12 @@ public class Pesquisa implements Serializable {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	public String getParticipação_estipulada() {
-		return participação_estipulada;
+	public String getParticipacao_estipulada() {
+		return participacao_estipulada;
 	}
-	public void setParticipação_estipulada(String participação_estipulada) {
-		this.participação_estipulada = participação_estipulada;
+	public void setParticipacao_estipulada(String participacao_estipulada) {
+		this.participacao_estipulada = participacao_estipulada;
 	}
+	
 	
 }

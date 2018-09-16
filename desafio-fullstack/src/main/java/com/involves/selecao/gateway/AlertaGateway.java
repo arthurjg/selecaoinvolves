@@ -6,7 +6,7 @@ import com.involves.selecao.alerta.Alerta;
 
 public interface AlertaGateway {
 	
-	void salvar(Alerta alerta);
+	void salvar(Alerta alerta);	
 
 	List<Alerta> buscarTodos();
 }

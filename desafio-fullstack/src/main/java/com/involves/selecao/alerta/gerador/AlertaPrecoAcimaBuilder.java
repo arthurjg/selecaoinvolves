@@ -6,21 +6,12 @@ import com.involves.selecao.alerta.Pesquisa;
 public class AlertaPrecoAcimaBuilder extends GeradorDeAlerta {	
 	
 	@Override
-	public Alerta geraAlerta(Pesquisa pesquisa) {
+	public Alerta geraAlerta(Pesquisa pesquisa, Integer margem) {
 		
-		Alerta alerta = super.geraAlerta(pesquisa);		
+		Alerta alerta = super.geraAlerta(pesquisa, margem);			
 		alerta.setDescricao("Preço acima do estipulado!");			
 		alerta.setFlTipo(2);
 		return alerta;
 	}	
-	
-	@Override
-	public Alerta geraAlerta(Pesquisa pesquisa, int margem){
-		Alerta alerta = super.geraAlerta(pesquisa, margem);
-		alerta.setDescricao("Preço acima do estipulado!");			
-		alerta.setFlTipo(2);
-		return alerta;
-	} 
-
     
 }

@@ -6,9 +6,9 @@ import com.involves.selecao.alerta.Pesquisa;
 public class AlertaRupturaBuilder extends GeradorDeAlerta {	
 	
 	@Override
-	public Alerta geraAlerta(Pesquisa pesquisa) {		
+	public Alerta geraAlerta(Pesquisa pesquisa, Integer margem) {
 		
-		Alerta alerta = super.geraAlerta(pesquisa);
+		Alerta alerta = super.geraAlerta(pesquisa, margem);		
 		alerta.setDescricao("Ruptura detectada!");		
 		alerta.setFlTipo(1);
 		return alerta;
