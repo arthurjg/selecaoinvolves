@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> <!-- (1) -->
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title><ui:insert name="titulo">Agile Promoter</ui:insert></title> <!-- (2) -->
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="#{request.contextPath}/resources/css/estilo.css"/>
+	<link rel="stylesheet" type="text/css" media="screen" href="#{request.contextPath}/resources/css/bootstrap/bootstrap.min.css"/>
+	
+	<script src="#{request.contextPath}/resources/js/lib/jquery-2.1.1.min.js"></script>
+    <script src="#{request.contextPath}/resources/js/lib/angular.min.js"></script>
+    <script src="#{request.contextPath}/resources/js/lib/bootstrap.min.js"></script>
+    
+    <script src="#{request.contextPath}/angular-app/ngapp.js"></script>
+    <script src="#{request.contextPath}/angular-app/controller/alertas-controller.js"></script>
+    <script src="#{request.contextPath}/angular-app/services/alertas-service.js"></script>
+</h:head>
+<h:body>
+	<div id="container" ng-app="alertaclient">
+		<div id="titulo">
+			<ui:insert name="titulo">Agile Promoter</ui:insert><!-- (4) -->  
+		</div>
+		<div id="logotipo">
+			
+		</div>
+		<div id="barra_menu">
+	    	<ui:insert name="barra_menu">
+	    		  <ui:include src="/restrito/menu_sistema.xhtml"/>
+	   		</ui:insert>  
+		</div>
+		<div id="corpo">
+			<ui:insert name="corpo"/>
+		</div>
+		<div id="rodape">
+	    	<ui:insert name="rodape">
+	    		<ui:include src="/publico/rodape.xhtml"/>
+	    	</ui:insert> 
+		</div>
+	</div>
+</h:body>
+</html>
